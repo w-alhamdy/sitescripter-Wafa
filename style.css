@@ -12,16 +12,17 @@ body {
     background-color: #d3d7da;
 }
 
-
+html, body {
+  max-width: 100%;
+  overflow: hidden;
+}
 
 p {
-    size: 5px;
-    opacity: 0.5;    
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    font-size: 16px;
+    opacity: 0.8;
     text-align: center;
+    line-height: 1.6;
+    margin-bottom: 15px;
 }
 /* Ensure your content stays sharp and readable */
 .container {
@@ -35,13 +36,23 @@ p {
 }
 
 nav {
-    background: #2c3e50; /* Professional dark blue */
-    padding: 1rem 2rem;
+    background: #2c3e50; 
+    height: 70px; /* This locks the size so it can't change */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+    z-index: 1000;
 }
 nav ul {
     display: flex;
     justify-content: center;
     list-style: none;
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Ensures list fills the nav */
+    align-items: center;
 }
 nav ul li a {
     color: white;
@@ -49,10 +60,34 @@ nav ul li a {
     padding: 0 20px;
     font-weight: bold;
     transition: 0.3s;
+     display: flex;       /* Changed to flex to center text vertically */
+    align-items: center; /* Vertical centering */
+    height: 70px; 
+
 }
 nav ul li a:hover {
     color: #9a8648; /* Changes color when you hover */
 }
+
+@media (max-width: 600px) {
+    nav {
+        /* Remove height: auto */
+        height: 60px; /* Lock it so it CANNOT grow */
+    }
+
+    nav ul {
+        /* Remove flex-wrap: wrap */
+        flex-wrap: nowrap; /* Force links to stay on one line */
+        justify-content: center;
+    }
+
+    nav ul li a {
+        padding: 0 8px;    /* Less space between links */
+        font-size: 12px;   /* Smaller text to fit the screen */
+        height: 60px;      /* Match the nav height */
+    }
+}
+
 
 .gallery {
     display: grid;
@@ -66,6 +101,17 @@ nav ul li a:hover {
     object-fit: cover; /* Prevents images from stretching */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+
+}
+.project img {
+  max-width: 500px;
+  width: 80%;
 }
 
 form {
@@ -175,8 +221,7 @@ h1, h2 {
 }
 h3 {
      color: #2c3e50;
-    text-align: center;
-    
+    text-align: center;   
     padding: 15px;
 }
 h5 {
@@ -373,17 +418,12 @@ body {
   color: #333;
 }
 
-/* Header */
-header {
-  background-color: #666;
-  color: white;
-  text-align: center;
-  padding: 15px 20px;
-}
 
-header h1 {
-  margin: 0;
-  font-size: 2.5rem;
+
+
+/* Prevent the "Scrollbar Jump" */
+html {
+    overflow-y: scroll; /* Forces scrollbar gutter to always exist */
 }
 
 /* Container */
@@ -466,23 +506,6 @@ header h1 {
 html {
   scroll-behavior: smooth;
 }
-html {
-  scroll-behavior: smooth;
-}
-
-#myBtn {
-  width: 50px;        /* Set a fixed width */
-  height: 50px;       /* Set a fixed height */
-  padding: 0;    
-  bottom: 80px;
-  border-radius: 50%; /* This makes it a perfect circle */
-  font-size: 15px;    /* Adjust text size to fit */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-
 
 
 .whatsapp-float {
@@ -511,16 +534,133 @@ html {
 .whatsapp-float:hover {
   transform: scale(1.1);
 }
+
 .center-container {
-  text-align: center;
-  border-radius: 50%;
-    size: 50%;
-  
+  text-align: center; 
+  border-image: url(#) 30 round;
 }
+/* ================================
+   📱 MOBILE RESPONSIVE FIXES
+================================ */
+
+@media (max-width: 768px) {
+
+  /* General spacing */
+  body {
+    font-size: 15px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+
+  p {
+    font-size: 15px;
+    text-align: center;
+  }
+
+  /* Containers */
+  .container {
+    max-width: 95%;
+    padding: 15px;
+    margin: 20px auto;
+  }
+
+  section {
+    padding: 20px 10px;
+  }
+
+  /* NAVBAR */
+  nav {
+    height: auto;
+    padding: 10px 0;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+  }
+
+  nav ul li {
+    margin: 5px 0;
+  }
+
+  nav ul li a {
+    height: auto;
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+
+  /* GALLERY */
+  .gallery {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+
+  .gallery img {
+    height: auto;
+  }
+
+  /* SERVICES */
+  .services-container {
+    grid-template-columns: 1fr;
+  }
+
+  /* PROJECTS */
+  .project img {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .project-content {
+    padding: 15px;
+  }
+
+  /* FORMS */
+  form {
+    width: 95%;
+    margin: 20px auto;
+  }
+
+  input,
+  textarea,
+  button {
+    font-size: 15px;
+  }
+
+  /* FAQ */
+  .faq-container,
+  .faq-section {
+    max-width: 100%;
+  }
+
+  .faq-question {
+    font-size: 14px;
+    padding: 12px;
+  }
+
+  /* WHATSAPP BUTTON */
+  .whatsapp-float {
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    bottom: 15px;
+    right: 15px;
+  }
+
+}
+
 
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
+    "@context": "https://schema.org",
   "@type": "WebSite",
   "name": "Wafa Al-Hamdy Portfolio",
   "url": "https://w-alhamdy.github.io/sitescripter.com/",
@@ -539,15 +679,6 @@ html {
       "name": "Safari Sips",
       "url": "https://safarisipsceo.github.io/Safari-Sips/"
     }
-  ]
+  ] 
 }
 </script>
-
-
-
-
-
-
-
-
-
