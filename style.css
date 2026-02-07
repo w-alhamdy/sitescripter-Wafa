@@ -112,8 +112,6 @@ img {
   max-width: 100%;
   height: auto;
   display: block;
-    
-
 }
 
 
@@ -163,12 +161,6 @@ summary { font-weight: bold; font-size: 1.1rem; }
     transform: scale(1.02);
  }
 
-
-
-
-
-
-
 /* Gallery Grid */
 .gallery {
     display: grid;
@@ -202,8 +194,6 @@ footer {
     width: 100%;
     color: #382b05;
     text-decoration: none;
-   
-  
 }
 
 
@@ -509,6 +499,15 @@ html {
   display: flex;
   justify-content: center;
 }
+.center-container img {
+  max-width: 400px;   /* or 300px / 500px your choice */
+  width: 90%;
+  margin: 0 auto;
+    max-width: 350px;
+border-radius: 12px;
+box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+
+}
 
 /* ================================
    📱 MOBILE RESPONSIVE FIXES
@@ -617,6 +616,7 @@ html {
   }
 
 }
+
 
 
 
