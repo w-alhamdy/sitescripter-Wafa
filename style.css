@@ -96,6 +96,7 @@ nav ul li a:hover {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
     padding: 40px;
+    text-align: center;
 }
 .gallery img {
     width: 100%;
@@ -103,6 +104,7 @@ nav ul li a:hover {
     object-fit: cover; /* Prevents images from stretching */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
 }
 
 img {
@@ -171,6 +173,7 @@ summary { font-weight: bold; font-size: 1.1rem; }
     max-width: 1100px;
     margin: 50px auto;
     padding: 20px;
+    text-align: center;
 }
 
 /* Gallery Grid */
@@ -178,6 +181,7 @@ summary { font-weight: bold; font-size: 1.1rem; }
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
+    text-align: center;
 }
 
 .gallery-item {
@@ -192,7 +196,8 @@ summary { font-weight: bold; font-size: 1.1rem; }
     width: 100%;
     height: auto;
     border-radius: 4px;
-    object-fit: cover; /* Keeps images from stretching */
+    object-fit: cover; 
+    text-align: center;/* Keeps images from stretching */
 }
 
 footer {
@@ -216,6 +221,7 @@ footer {
     line-height: 1.6;
     color: #333;
     font-family: sans-serif;
+    text-align: center;
 }
 
 h1, h2 {
@@ -687,6 +693,7 @@ html {
 }
 
 </script>
+
 
 
 
