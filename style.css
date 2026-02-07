@@ -317,8 +317,13 @@ section {
   cursor: pointer;
   outline: none;
   transition: 0.3s ease;
+  background: #9a8648;
+  color: #fff;
+  padding: 16px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-
 .faq-question:hover {
   background-color: #555;
 }
@@ -329,11 +334,6 @@ section {
   transition: max-height 0.3s ease;
   padding: 0 20px;
   background-color: #0c2d42;
-}
-
-.faq-answer {
-  max-height: 0;
-  overflow: hidden;
   transition: max-height 0.3s ease;
 }
 
@@ -357,18 +357,7 @@ section {
   margin-bottom: 15px;
 }
 
-.faq-question {
-  width: 100%;
-  background: #9a8648;
-  color: #fff;
-  padding: 16px 20px;
-  border: none;
-  font-size: 16px;
-  cursor: pointer;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+
 
 .faq-question .icon {
   font-size: 20px;
@@ -379,12 +368,6 @@ section {
   transform: rotate(45deg);
 }
 
-.faq-answer {
-  max-height: 0;
-  overflow: hidden;
-  background: #f9f9f9;
-  transition: max-height 0.35s ease;
-}
 
 .faq-answer p {
   padding: 15px 20px;
@@ -523,9 +506,10 @@ html {
 }
 
 .center-container {
-  text-align: center; 
-  border-image: url(#) 30 round;
+  display: flex;
+  justify-content: center;
 }
+
 /* ================================
    📱 MOBILE RESPONSIVE FIXES
 ================================ */
@@ -633,6 +617,7 @@ html {
   }
 
 }
+
 
 
 
