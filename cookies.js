@@ -17,21 +17,22 @@ window.addEventListener("load", function(){
       message: "This website uses cookies to improve your experience and analyse traffic.",
       dismiss: "Accept all",
       deny: "Decline",
+      allow: "Essential only",
       link: "Privacy Policy",
-      href: "privacy.html",
-      allow: "Essential only"
+      href: "privacy.html"
     },
     onInitialise: function(status){
-      var type = this.options.type;
       if(status == cookieconsent.status.allow){
-        // load analytics or scripts here
+        console.log("All cookies accepted");
+        // load analytics scripts here if you have any
       }
-      if(status == cookieconsent.status.dismiss || status == cookieconsent.status.denied){
-        // do nothing / block analytics
+      if(status == cookieconsent.status.denied){
+        console.log("Cookies declined");
+        // block analytics scripts
       }
     },
     onStatusChange: function(status, chosenBefore){
-      // optional: run when user changes preferences
+      console.log("Cookie status changed:", status);
     }
   });
 });
