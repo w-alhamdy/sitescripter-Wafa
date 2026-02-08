@@ -675,10 +675,45 @@ box-shadow: 0 6px 18px rgba(0,0,0,0.15);
   animation: slideDown 0.5s forwards;
 }
 
+/* Cookie banner styles — add at the bottom of style.css */
+.cookie-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  background: linear-gradient(to right, #ff4d4d, #e60000);
+  color: #fff;
+  text-align: center;
+  font-family: "Lato", sans-serif;
+  font-weight: 100;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.cookie-bar a {
+  color: #5cf2ff;
+  text-decoration: underline;
+}
+
+.checkbox-cb {
+  display: none;
+}
+
+.cookie-bar.hide {
+  display: none;
+}
+
+
 @keyframes slideDown {
   from { transform: translateY(-100%); }
   to { transform: translateY(0); }
 }
+
 
 
 
