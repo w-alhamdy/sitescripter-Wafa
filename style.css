@@ -651,6 +651,40 @@ box-shadow: 0 6px 18px rgba(0,0,0,0.15);
   text-shadow: 0 0 10px #00e5ff;
 }
 
+.cookie-bar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  background: linear-gradient(to right, #ff4d4d, #e60000);
+  color: #fff;
+  font-size: 14px;
+  font-family: "Lato", sans-serif;
+  font-weight: 100;
+  transition: all 0.5s ease;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.cookie-bar a {
+  color: #5cf2ff;
+  text-decoration: underline;
+}
+
+.checkbox-cb {
+  display: none;
+}
+
+.cookie-bar.hide {
+  transform: translateY(-100%);
+}
+
 
 
 
