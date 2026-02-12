@@ -525,6 +525,55 @@ box-shadow: 0 6px 18px rgba(0,0,0,0.15);
 
 }
 
+
+/* Cookie Banner */
+.cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #111;
+  color: white;
+  padding: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  z-index: 9999;
+  flex-wrap: wrap;
+  box-shadow: 0 -4px 10px rgba(0,0,0,0.3);
+}
+
+.cookie-banner p {
+  margin: 0;
+  font-size: 14px;
+  max-width: 600px;
+}
+
+.cookie-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.cookie-banner button {
+  padding: 8px 14px;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+  font-size: 13px;
+  background: #ff4d4d;
+  color: white;
+}
+
+.cookie-banner button:hover {
+  opacity: 0.9;
+}
+
+.cookie-banner .outline {
+  background: transparent;
+  border: 1px solid white;
+}
+
 /* ================================
    📱 MOBILE RESPONSIVE FIXES
 ================================ */
@@ -686,6 +735,7 @@ box-shadow: 0 6px 18px rgba(0,0,0,0.15);
 .cookie-buttons button:hover {
   box-shadow: 0 0 10px #00e5ff;
 }
+
 
 
 
