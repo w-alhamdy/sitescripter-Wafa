@@ -301,6 +301,30 @@ section {
   color: #666;
 }
 
+
+/* توحيد النصوص لجميع الخدمات */
+.services-container .service-box {
+    color: #333;               /* لون النص */
+    line-height: 1.6;          /* مسافة بين السطور */
+    font-size: 16px;           /* حجم الخط */
+    margin-bottom: 20px;       /* مسافة أسفل كل خدمة */
+}
+
+.services-container .service-box h3 {
+    color: #333;               /* عنوان الخدمة */
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.services-container .service-box p,
+.services-container .service-box ul {
+    margin-bottom: 10px;
+}
+
+.services-container .service-box ul li {
+    margin-bottom: 5px;
+}
+
 .faq {
   padding: 60px 20px;
   background-color: #f9f9f9;
@@ -683,6 +707,7 @@ html {
   background: transparent;
   border: 1px solid white;
 }
+
 
 
 
